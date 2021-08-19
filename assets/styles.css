@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 /* Color Vars */
+/* Other Vars */
 /* ---------------------------------------------------
     MAIN BODY
 --------------------------------------------------- */
@@ -59,7 +60,7 @@ body {
 
 .social-icons a {
   margin-right: 5px;
-  color: #000000;
+  color: #ffffff !important;
 }
 
 .fab:hover {
@@ -69,7 +70,8 @@ body {
   color: #929292;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
   text-decoration: none;
   color: #000000;
 }
@@ -107,21 +109,21 @@ a:link, a:visited {
 }
 
 .card-1 {
-  background-image: url(https://ionicframework.com/img/getting-started/ionic-native-card.png);
+  background-image: url(/assets/img/TBD.jpg);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 80px;
 }
 
 .card-2 {
-  background-image: url(/assets/img/GitHubLogo.png);
+  background-image: url(/assets/img/TBD.png);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 80px;
 }
 
 .card-3 {
-  background-image: url(/assets/img/LinkedInLogo.png);
+  background-image: url(/assets/img/TBD.png);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 80px;
@@ -131,6 +133,65 @@ a:link, a:visited {
   .card {
     margin: 20px;
   }
+}
+
+/* ---------------------------------------------------
+    ABOUT OVERLAY
+--------------------------------------------------- */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 5px;
+  width: 35%;
+  position: relative;
+  -webkit-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000;
+}
+
+.popup .close:hover {
+  color: #8d918d;
 }
 
 /* ---------------------------------------------------

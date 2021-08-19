@@ -7,11 +7,14 @@ $grey1: #8d918d;
 $grey2: #485461;
 $grey3: #28313b;
 
+/* Other Vars */
+$font-family: "Roboto", sans-serif;
+
 /* ---------------------------------------------------
     MAIN BODY
 --------------------------------------------------- */
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: $font-family;
   background: linear-gradient(-45deg, $grey1, $grey2, $grey3);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
@@ -47,7 +50,7 @@ body {
   justify-content: center;
   a {
     margin-right: 5px;
-    color: $black;
+    color: $blanco !important;
   }
 }
 
@@ -57,11 +60,11 @@ body {
   color: #929292;
 }
 
-a:link, a:visited{
+a:link,
+a:visited {
   text-decoration: none;
   color: $black;
 }
-
 
 /* ---------------------------------------------------
     HOVER CARDS
@@ -98,17 +101,17 @@ a:link, a:visited{
 }
 
 .card-1 {
-  background-image: url(https://ionicframework.com/img/getting-started/ionic-native-card.png);
+  background-image: url(/assets/img/TBD.jpg);
   @include cards-settings;
 }
 
 .card-2 {
-  background-image: url(/assets/img/GitHubLogo.png);
+  background-image: url(/assets/img/TBD.png);
   @include cards-settings;
 }
 
 .card-3 {
-  background-image: url(/assets/img/LinkedInLogo.png);
+  background-image: url(/assets/img/TBD.png);
   @include cards-settings;
 }
 
@@ -117,6 +120,58 @@ a:link, a:visited{
     margin: 20px;
   }
 }
+
+/* ---------------------------------------------------
+    ABOUT OVERLAY
+--------------------------------------------------- */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  &:target {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: $blanco;
+  border-radius: 5px;
+  width: 35%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  h2 {
+    margin-top: 0;
+    color: $black;
+    font-family: $font-family;
+  }
+  .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: $black;
+    &:hover {
+      color: $grey1;
+    }
+  }
+}
+
 
 /* ---------------------------------------------------
     LOADING PAGE ANIMATION
