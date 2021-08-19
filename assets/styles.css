@@ -1,10 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 /* Color Vars */
 /* ---------------------------------------------------
     MAIN BODY
 --------------------------------------------------- */
 body {
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #8d918d, #485461, #28313b);
   background-size: 400% 400%;
   -webkit-animation: gradient 15s ease infinite;
           animation: gradient 15s ease infinite;
@@ -40,13 +41,37 @@ body {
   margin-top: 1cm;
 }
 
-/* ---------------------------------------------------
-    JUMBOTRON
---------------------------------------------------- */
 #profile_pic {
   margin-left: auto;
   margin-right: auto;
   width: 25%;
+}
+
+.social-icons {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.social-icons a {
+  margin-right: 5px;
+  color: #000000;
+}
+
+.fab:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  cursor: pointer;
+  color: #929292;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #000000;
 }
 
 /* ---------------------------------------------------
@@ -89,14 +114,14 @@ body {
 }
 
 .card-2 {
-  background-image: url(https://ionicframework.com/img/getting-started/components-card.png);
+  background-image: url(/assets/img/GitHubLogo.png);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 80px;
 }
 
 .card-3 {
-  background-image: url(https://ionicframework.com/img/getting-started/theming-card.png);
+  background-image: url(/assets/img/LinkedInLogo.png);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 80px;

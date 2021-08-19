@@ -1,27 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
 /* Color Vars */
-$bg_grey: #8d918d;
 $blanco: #ffffff;
+$black: #000000;
+$grey1: #8d918d;
+$grey2: #485461;
+$grey3: #28313b;
 
 /* ---------------------------------------------------
     MAIN BODY
 --------------------------------------------------- */
 body {
   font-family: "Roboto", sans-serif;
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+  background: linear-gradient(-45deg, $grey1, $grey2, $grey3);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #top_line {
@@ -30,13 +35,31 @@ body {
   margin-top: 1cm;
 }
 
-/* ---------------------------------------------------
-    JUMBOTRON
---------------------------------------------------- */
 #profile_pic {
   margin-left: auto;
   margin-right: auto;
   width: 25%;
+}
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  a {
+    margin-right: 5px;
+    color: $black;
+  }
+}
+
+.fab:hover {
+  transform: scale(1.25);
+  cursor: pointer;
+  color: #929292;
+}
+
+a:link, a:visited{
+  text-decoration: none;
+  color: $black;
 }
 
 
@@ -68,25 +91,25 @@ body {
   }
 }
 
-.card-1 {
-  background-image: url(https://ionicframework.com/img/getting-started/ionic-native-card.png);
+@mixin cards-settings() {
   background-repeat: no-repeat;
   background-position: right;
   background-size: 80px;
+}
+
+.card-1 {
+  background-image: url(https://ionicframework.com/img/getting-started/ionic-native-card.png);
+  @include cards-settings;
 }
 
 .card-2 {
-  background-image: url(https://ionicframework.com/img/getting-started/components-card.png);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: 80px;
+  background-image: url(/assets/img/GitHubLogo.png);
+  @include cards-settings;
 }
 
 .card-3 {
-  background-image: url(https://ionicframework.com/img/getting-started/theming-card.png);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: 80px;
+  background-image: url(/assets/img/LinkedInLogo.png);
+  @include cards-settings;
 }
 
 @media (max-width: 990px) {
